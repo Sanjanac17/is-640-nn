@@ -12,7 +12,7 @@ data = [
 
 model = MLP(2, [4, 1])
 
-# Training loop
+
 epochs = 100 
 learning_rate = 0.01
 
@@ -27,7 +27,6 @@ for k in range(epochs):
     
     model.zero_grad()  
     total_loss.backward()  
-    
     
     for p in model.parameters():
         p.data -= learning_rate * p.grad
